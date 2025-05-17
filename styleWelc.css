@@ -1,6 +1,5 @@
 body {
     font-family: 'Orbitron', sans-serif;
-    /* background: linear-gradient(45deg,#4a2d78 , #0052a5, #845ec2,#0076c5 ,#0097d1 ,#00b6ca ,#00d3b4); */
     background-image: url(background.png);
     color: #fff;
     text-align: center;
@@ -63,23 +62,6 @@ button:hover {
     100% { transform: scale(1); }
 }
 
-.rocket {
-  position: fixed;
-  bottom: 50px;
-  left: 10px;
-  width: 100px;
-  height: auto;
-  z-index: 1000;
-}
-
-.planet {
-  position: fixed;
-  bottom: 10px;
-  right: 100px;
-  width: 300px;
-  height: auto;
-  z-index: 1000;
-}
 
 .alien {
   position: fixed;
@@ -103,8 +85,41 @@ button:hover {
   z-index: 1000;
 }
 
+
 @media (max-width: 600px) {
   body {
-    font-size: 16px;
-    padding: 10px;
+    height: auto; 
+    padding: 20px 10px;
   }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 12px 16px;
+  }
+
+  .alien {
+    width: 60px;
+    left: 120px;
+    bottom: 180px;
+  }
+
+  .paragraph {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+
+ 
+  html, body {
+    overflow: auto;
+    height: auto;
+  }
+}
+
