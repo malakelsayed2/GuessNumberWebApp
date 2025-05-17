@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     attemptsDisplay.textContent = `Attempts: ${attempts}`; 
 
     if (guessedNumber === randomNumber) {
-    message.textContent = `You got it! After ${attempts} attempts.`;
+    message.textContent = `You got it ${randomNumber}! After ${attempts} attempts.`;
     input.disabled = true;
     guessBtn.disabled = true;
     attemptsDisplay.textContent ="" ;
