@@ -3,7 +3,7 @@ body {
     background-image: url(background.png);
     color: #fff;
     text-align: center;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,25 +11,24 @@ body {
 }
 
 html, body {
-  overflow: hidden;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 h1 {
     font-size: 50px;
     font-family: 'Bangers', sans-serif;
-    font-weight:bolder;
+    font-weight: bolder;
     text-transform: uppercase;
     text-shadow: 4px 4px 5px rgba(70, 18, 76, 0.8);
-
 }
 
 h2 {
     font-size: 25px;
     font-family: 'Bangers', sans-serif;
-    font-weight:bolder;
+    font-weight: bolder;
     text-shadow: 4px 4px 5px rgba(70, 18, 76, 0.8);
     animation: fadeIn 2s ease-in-out;
 }
@@ -62,26 +61,66 @@ button:hover {
     100% { transform: scale(1); }
 }
 
-
 .alien {
-  position: fixed;
-  bottom: 310px;
-  left: 230px;
-  width: 100px;
-  height: auto;
-  z-index: 1000;
+    position: fixed;
+    bottom: 310px;
+    left: 230px;
+    width: 100px;
+    height: auto;
+    z-index: 1000;
 }
 
 .paragraph {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  background: rgba(0,0,0,0.5);
-  color: white;
-  padding: 10px 0;
-  margin: 0;
-  z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 10px 0;
+    margin: 0;
+    z-index: 1000;
+    font-size: 14px;
 }
 
+/* 📱 Mobile Responsiveness */
+@media (max-width: 768px) {
+    html, body {
+        overflow: auto;
+        height: auto;
+        padding: 10px;
+    }
+
+    body {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 30px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 8px 16px;
+        width: 90%;
+        max-width: 200px;
+    }
+
+    .alien {
+        position: static;
+        margin: 20px auto;
+        width: 80px;
+    }
+
+    .paragraph {
+        font-size: 12px;
+        padding: 6px 0;
+    }
+}
