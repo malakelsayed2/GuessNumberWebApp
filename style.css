@@ -3,7 +3,7 @@ body {
     background-image: url(background.png);
     color: #fff;
     text-align: center;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,16 +11,16 @@ body {
 }
 
 html, body {
-  overflow: hidden;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 h1 {
     font-size: 45px;
     font-family: 'Bangers', sans-serif;
-    font-weight:bolder;
+    font-weight: bolder;
     text-shadow: 4px 4px 5px rgba(70, 18, 76, 0.8);
     animation: fadeIn 2s ease-in-out;
 }
@@ -54,7 +54,7 @@ button {
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    background: linear-gradient(45deg,#00b6ca);
+    background: linear-gradient(45deg, #00b6ca);
     color: white;
     transition: 0.3s;
 }
@@ -95,24 +95,57 @@ button:hover {
     50% { transform: translateY(-10px); }
 }
 
-
 .paragraph {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  background: rgba(0,0,0,0.5);
-  color: white;
-  padding: 10px 0;
-  margin: 0;
-  z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 10px 0;
+    margin: 0;
+    z-index: 1000;
+    font-size: 14px;
 }
 
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    html, body {
+        overflow: auto;
+        height: auto;
+        padding: 10px;
+    }
 
+    body {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 30px;
+    }
 
-  .paragraph {
-    font-size: 14px;
-    padding: 8px 0;
-  }
+    h1 {
+        font-size: 30px;
+    }
+
+    input[type="number"] {
+        width: 90%;
+        max-width: 300px;
+        font-size: 16px;
+    }
+
+    button {
+        width: 90%;
+        max-width: 200px;
+        font-size: 16px;
+    }
+
+    #message {
+        font-size: 18px;
+        margin: 10px;
+    }
+
+    .paragraph {
+        font-size: 12px;
+        padding: 6px 0;
+    }
 }
