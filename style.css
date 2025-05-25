@@ -109,7 +109,6 @@ button:hover {
     font-size: 14px;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 768px) {
     html, body {
         overflow: auto;
@@ -121,6 +120,9 @@ button:hover {
         flex-direction: column;
         justify-content: flex-start;
         padding-top: 30px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
 
     h1 {
